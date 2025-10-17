@@ -65,6 +65,8 @@
 </template>
 
 <script setup lang="ts">
+import { diffDays, formatDate } from '~/shared/utils/date';
+
 const props = defineProps<{
   id: number;
   title: string;
@@ -81,20 +83,4 @@ const props = defineProps<{
 const formattedFrom = computed(() => formatDate(props.fromDate));
 const formattedTill = computed(() => formatDate(props.tillDate));
 const days = computed(() => diffDays(props.fromDate, props.tillDate));
-
-function formatDate(v: string) {
-  const d = new Date(v);
-  if (Number.isNaN(d.getTime())) return v;
-  // 25.05.2025
-  return d.toLocaleDateString("en-GB");
-}
-
-function diffDays(from: string, till: string) {
-  const a = new Date(from);
-  const b = new Date(till);
-  if (Number.isNaN(a.getTime()) || Number.isNaN(b.getTime())) return 0;
-  const ms = Math.abs(b.getTime() - a.getTime());
-  // округление до календарных дней (как в примере — «4 days»)
-  return Math.max(1, Math.round(ms / (1000 * 60 * 60 * 24)));
-}
 </script>
