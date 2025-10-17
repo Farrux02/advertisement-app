@@ -83,6 +83,15 @@ const { data } = await useAsyncData(
   () => $fetch("/api/ads", { params: { search: searchQuery.value } }),
   { watch: [searchQuery] }
 );
+
+useSeoMeta({
+  title: 'Recent tasks — Ad Management',
+  ogTitle: 'Recent tasks — Ad Management',
+  description: 'Browse recent tasks, filter by region, date and category.',
+  ogDescription: 'Browse recent tasks, filter by region, date and category.',
+  twitterTitle: 'Recent tasks — Ad Management',
+  twitterDescription: 'Browse recent tasks, filter by region, date and category.',
+})
 </script>
 
 <style scoped></style>

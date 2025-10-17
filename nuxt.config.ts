@@ -45,4 +45,28 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en' },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'description', content: 'Mini ads app. Browse, search and manage tasks & requests.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Ad Management' },
+        { property: 'og:image', content: '/og-default.jpg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@your_handle' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      ]
+    }
+  },
+  nitro: {
+    prerender: { routes: ['/'] }
+  }
 })
