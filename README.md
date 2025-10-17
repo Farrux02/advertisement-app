@@ -34,10 +34,10 @@ A modern, offline-capable Vue.js application for managing advertisements.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ad-management-app.git
+git clone https://github.com/Farrux02/advertisement-app
 
 # Navigate to project directory
-cd ad-management-app
+cd advertisement-app
 
 # Install dependencies
 npm install
