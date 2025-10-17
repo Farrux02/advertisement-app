@@ -1,75 +1,68 @@
-# Nuxt Minimal Starter
+# Ad Management Application
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, offline-capable Vue.js application for managing advertisements.
 
-## Setup
+## 🚀 Features
 
-Make sure to install dependencies:
+- ✅ **Ad Management**: View ads
+- 🔍 **Search & Filtering**: Filtering by search
+- 📱 **Responsive Design**: Mobile-first with desktop breakpoint
+- 🔌 **Offline Support**: Full PWA with offline functionality
+- 🎨 **Modern UI**: Built with Nuxt UI v4 and Tailwind CSS
+- ⚡ **Performance**: Optimized with Nuxt 4
+
+## 📸 Screenshots
+
+### Desktop View
+
+![Desktop View](./screenshots/desktop_view.png)
+
+### Mobile View
+
+![Mobile View](./screenshots/mobile_view.png)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Nuxt 4
+- **UI Framework**: Nuxt UI v4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Pinia
+- **PWA**: Vite PWA Plugin
+
+## 📦 Installation
 
 ```bash
-# npm
+# Clone the repository
+git clone https://github.com/yourusername/ad-management-app.git
+
+# Navigate to project directory
+cd ad-management-app
+
+# Install dependencies
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Run development server
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## 🏗️ Project Structure
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+ad-management-app/
+├── app/
+│   ├── modules/
+│   │   ├── advertisement/
+│   │   │   ├── components/
+│   │   │   │   ├── AdCard.vue
+│   │   │   ├── ad.types.ts
+│   │   │   ├── index.ts
+│   ├── pages/
+│   │   ├── index.vue
+│   ├── shared/
+│   │   ├── components/
+│   │   │   ├── filter/
+│   │   │   │   ├── Filter.vue
+├── nuxt.config.ts
+└── tsconfig.json
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
